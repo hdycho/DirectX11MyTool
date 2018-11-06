@@ -94,7 +94,7 @@ private:
 	//////////////피킹을위한 모델의 최대최소점/////////////////
 	void PickPosInit();
 	void UpdatePickPos();
-	bool IsPicked();
+	//bool IsPicked();
 
 private:
 	vector<D3DXVECTOR3> initBoxPos; // 초기 박스 
@@ -103,7 +103,7 @@ private:
 
 protected:
 	void CalcPosition();
-	
+	bool IsPicked();
 protected:
 	GameModel*parentModel;
 

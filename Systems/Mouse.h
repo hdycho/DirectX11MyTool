@@ -57,6 +57,7 @@ private:
 	D3DXVECTOR3 wheelStatus;
 	D3DXVECTOR3 wheelOldStatus;
 	D3DXVECTOR3 wheelMoveValue;
+	D3DXVECTOR3 wheelMoveValueBefore;
 
 	DWORD timeDblClk;
 	DWORD startDblClk[MAX_INPUT_MOUSE];

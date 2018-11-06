@@ -248,6 +248,7 @@
     <ClCompile Include="Viewer\Frsutum.cpp" />
     <ClCompile Include="Viewer\Orbit.cpp" />
     <ClCompile Include="Viewer\Perspective.cpp" />
+    <ClCompile Include="Viewer\TPSCamera.cpp" />
     <ClCompile Include="Viewer\Viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -359,6 +360,7 @@
     <ClInclude Include="Viewer\Frustum.h" />
     <ClInclude Include="Viewer\Orbit.h" />
     <ClInclude Include="Viewer\Perspective.h" />
+    <ClInclude Include="Viewer\TPSCamera.h" />
     <ClInclude Include="Viewer\Viewport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

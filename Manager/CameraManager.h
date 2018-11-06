@@ -3,6 +3,7 @@
 #include "../Viewer/Freedom.h"
 #include "../Viewer/Orbit.h"
 #include "../Viewer/Follow.h"
+#include "../Viewer/TPSCamera.h"
 
 class CameraManager
 {
@@ -12,7 +13,8 @@ public:
 		Freedom,
 		Fixity,
 		Orbit,
-		Follow
+		Follow,
+		TPS
 	};
 public:
 	static CameraManager*GetInstance();
@@ -34,7 +36,7 @@ private:
 	CAMERASTATE cState;
 	vector<wstring> stateNames;
 	wstring selectStateName;
-	GameModel*model;
+	class GameModel*model;
 
 	class Frustum*frustum;
 	//Follow카메라에 들어온 모델이름
@@ -46,6 +48,9 @@ private:
 	//누르기전 설정값들
 	CAMERASTATE prevState;
 	D3DXVECTOR3 position;
+
+	//TPS
+	D3DXVECTOR3*TpsPos,*TpsRotate;
 
 	//Follow
 	D3DXVECTOR3*FstartPos, *Frotate;

@@ -82,6 +82,13 @@ void Program::Render()
 
 	for (Execute* exe : executes)
 		exe->Render();
+
+	D3DDesc desc;
+	D3D::GetDesc(&desc);
+	RECT rc;
+	GetClientRect(desc.Handle, &rc);
+
+	ImGui::Text("%f %f", rc.right, rc.bottom);
 }
 
 void Program::PostRender()

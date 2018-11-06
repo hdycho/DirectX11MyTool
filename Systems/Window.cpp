@@ -39,15 +39,15 @@ WPARAM Window::Run()
 		{
 			Time::Get()->Update();
 
-			if (ImGui::IsMouseHoveringAnyWindow() == false)
-			{
+			//TODO: TPS에서 잠시끄기
+		/*	if (ImGui::IsMouseHoveringAnyWindow() == false)
+			{*/
 				Keyboard::Get()->Update();
 				Mouse::Get()->Update();
-			}
+	/*		}*/
 
 			program->Update();
 			ImGui::Update();
-
 
 			program->PreRender();
 
@@ -146,6 +146,41 @@ void Window::ImGuiNewStyle()
 	//io.Fonts->AddFontFromFileTTF(("C:\\Windows\\Fonts\\Ruda-Bold.ttf"), 18);
 }
 
+void Window::MouseNormalized(HWND&handle)
+{
+	//마우스가 클라이언트화면 밖으로 넘어가면 중앙으로 위치시키기
+
+	POINT point;
+	GetCursorPos(&point);
+	ScreenToClient(handle, &point);
+
+	//먼저 클라이언트 영역의 크기부터 받아온다
+	RECT rc;
+	GetClientRect(handle, &rc);
+
+	//x축
+	if(point.x > rc.right||point.x<rc.left)
+	{
+		POINT sPoint = { rc.left,rc.right };
+
+		ClientToScreen(handle, &sPoint);
+		ClientToScreen(handle, &point);
+		float midPosX = (sPoint.x + sPoint.y) / 2.0f;
+		SetCursorPos(midPosX, point.y);
+	}
+
+	//y축
+	if (point.y > rc.bottom || point.y < rc.top)
+	{
+		POINT sPoint = { rc.bottom,rc.top };
+
+		ClientToScreen(handle, &sPoint);
+		ClientToScreen(handle, &point);
+		float midPosY = (sPoint.x + sPoint.y) / 2.0f;
+		SetCursorPos(point.x, midPosY);
+	}
+}
+
 Window::Window()
 {
 	D3DDesc desc;
@@ -221,6 +256,7 @@ Window::Window()
 
 Window::~Window()
 {
+
 	D3DDesc desc;
 	D3D::GetDesc(&desc);
 
@@ -238,6 +274,24 @@ LRESULT CALLBACK Window::WndProc(HWND handle, UINT message, WPARAM wParam, LPARA
 
 	if (ImGui::WndProc((UINT*)handle, message, wParam, lParam))
 		return true;
+
+	if(message==WM_KEYDOWN)
+	{
+		switch (wParam)
+		{
+			case 'K':
+				SetCursor(NULL);
+				ShowCursor(false);
+				break;
+			case 'L':
+			{
+				SetCursor(LoadCursor(0, IDC_ARROW));
+				ShowCursor(true);
+				break;
+			}
+		}
+	}
+	
 
 	if (message == WM_SIZE)
 	{

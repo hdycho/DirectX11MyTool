@@ -11,6 +11,7 @@ public:
 	void Render();
 
 	bool Y(OUT D3DXVECTOR3 * out);
+	float Y(D3DXVECTOR3& position);
 	void AdjustY(D3DXVECTOR3 & location);
 
 	bool&IsPick() { return isPick; }

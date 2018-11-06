@@ -2,6 +2,7 @@
 #include "CameraManager.h"
 #include "../Objects/GameModel.h"
 #include "../Viewer/Frustum.h"
+#include "../Objects/Player.h"
 
 CameraManager*CameraManager::instance = NULL;
 
@@ -32,6 +33,9 @@ void CameraManager::Init(ExecuteValues*values)
 	Camera*follow = new Follow();
 	cams.push_back(follow);
 
+	Camera*tps = new TPSCamera(20,0.5f);
+	cams.push_back(tps);
+
 	this->values = values;
 
 	this->values->MainCamera = cams[(int)CAMERASTATE::Freedom];
@@ -42,6 +46,7 @@ void CameraManager::Init(ExecuteValues*values)
 	stateNames.push_back(L"Fixity");
 	stateNames.push_back(L"Orbit");
 	stateNames.push_back(L"Follow");
+	stateNames.push_back(L"TPSCamera");
 
 	selectStateName = L"Freedom";
 	cState = CAMERASTATE::Freedom;
@@ -57,6 +62,8 @@ void CameraManager::Update()
 		cState = CAMERASTATE::Orbit;
 	else if (selectStateName == L"Follow")
 		cState = CAMERASTATE::Follow;
+	else if (selectStateName == L"TPSCamera")
+		cState = CAMERASTATE::TPS;
 }
 
 void CameraManager::Render()
@@ -135,6 +142,27 @@ void CameraManager::ImGuiRender()
 			}
 		}
 		break;
+		case CameraManager::CAMERASTATE::TPS:
+		{
+			if (ImGui::BeginCombo("Target", String::ToString(modelName).c_str()))
+			{
+				ImGui::EndCombo();
+			}
+			else if (ImGui::BeginDragDropTarget())
+			{
+				if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("ObjPayload"))
+				{
+					GameModel*p = (GameModel*)payload->Data;
+					IM_ASSERT(payload->DataSize == sizeof(GameModel));
+					model = p->GetPtr();
+					TpsPos = &model->Position();
+					TpsRotate = &model->Rotation();
+					modelName = model->ModelName();
+				}
+				ImGui::EndDragDropTarget();
+			}
+		}
+		break;
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("Select"))
@@ -191,6 +219,21 @@ void CameraManager::ImGuiRender()
 			}
 		}
 		break;
+		case CameraManager::CAMERASTATE::TPS:
+		{
+			if (values->MainCamera == cams[(int)CAMERASTATE::TPS])
+			{
+				TPSCamera*downCast = dynamic_cast<TPSCamera*>(values->MainCamera);
+
+				ImGui::Text("SetHeight");
+				ImGui::DragFloat("Height", &downCast->GetSetY(), 0.5f);
+				ImGui::Text("SetDistance");
+				ImGui::DragFloat("Distance", &downCast->GetSetZ(), 0.5f);
+				ImGui::Text("SetRotate");
+				ImGui::DragFloat("Rotation", &downCast->GetRotate().x, 0.1f);
+			}
+		}
+		break;
 	}
 
 	ImGui::End();
@@ -202,11 +245,13 @@ void CameraManager::SelectCamera(CAMERASTATE cState)
 	{
 		case CameraManager::CAMERASTATE::Freedom:
 		{
+			
 			values->MainCamera = cams[(int)CAMERASTATE::Freedom];
 		}
 		break;
 		case CameraManager::CAMERASTATE::Fixity:
 		{
+
 			values->MainCamera = cams[(int)CAMERASTATE::Fixity];
 			values->MainCamera->Position(0, 50, 0);
 			values->MainCamera->Rotation(Math::ToRadian(-90), 0);
@@ -214,6 +259,7 @@ void CameraManager::SelectCamera(CAMERASTATE cState)
 		break;
 		case CameraManager::CAMERASTATE::Orbit:
 		{
+
 			values->MainCamera = cams[(int)CAMERASTATE::Orbit];
 			Orbit*downCast = dynamic_cast<Orbit*>(values->MainCamera);
 			downCast->InputInfo(OstartPos);
@@ -221,10 +267,23 @@ void CameraManager::SelectCamera(CAMERASTATE cState)
 		break;
 		case CameraManager::CAMERASTATE::Follow:
 		{
+		
 			values->MainCamera = cams[(int)CAMERASTATE::Follow];
 			
 			Follow*downCast = dynamic_cast<Follow*>(values->MainCamera);
 			downCast->InputInfo(FstartPos, Frotate);
+		}
+		break;
+		case CameraManager::CAMERASTATE::TPS:
+		{
+			
+			values->MainCamera = cams[(int)CAMERASTATE::TPS];
+
+			TPSCamera*downCast = dynamic_cast<TPSCamera*>(values->MainCamera);
+			downCast->InputInfo(TpsPos, TpsRotate);
+			
+			Player*downPlayer = dynamic_cast<Player*>(model);
+			downPlayer->SetCamera(downCast);
 		}
 		break;
 	}

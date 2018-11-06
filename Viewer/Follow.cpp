@@ -22,10 +22,10 @@ void Follow::Update()
 {
 	//회전처리
 	{
-		if (Keyboard::Get()->Press('A'))
+		/*if (Keyboard::Get()->Press('A'))
 			rotateValue.x += rotationSpeed*Time::Delta();
 		else if (Keyboard::Get()->Press('D'))
-			rotateValue.x -= rotationSpeed*Time::Delta();
+			rotateValue.x -= rotationSpeed*Time::Delta();*/
 
 		Rotation(moveRotate->x + rotateValue.x, moveRotate->y + Math::ToRadian(180));
 	}

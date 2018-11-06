@@ -279,14 +279,17 @@
     <ClCompile Include="Manager\CameraManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Viewer\Follow.cpp">
-      <Filter>Viewer</Filter>
-    </ClCompile>
     <ClCompile Include="Objects\WeaponModel.cpp">
       <Filter>Objects\Models</Filter>
     </ClCompile>
     <ClCompile Include="Physics\Trail.cpp">
       <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\TPSCamera.cpp">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Follow.cpp">
+      <Filter>Viewer\FollowCam</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -592,14 +595,17 @@
     <ClInclude Include="Manager\CameraManager.h">
       <Filter>Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Viewer\Follow.h">
-      <Filter>Viewer</Filter>
-    </ClInclude>
     <ClInclude Include="Objects\WeaponModel.h">
       <Filter>Objects\Models</Filter>
     </ClInclude>
     <ClInclude Include="Physics\Trail.h">
       <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\TPSCamera.h">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Follow.h">
+      <Filter>Viewer\FollowCam</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -659,6 +665,9 @@
     </Filter>
     <Filter Include="Manager">
       <UniqueIdentifier>{1285ece7-a742-4060-8fbd-74c923231fde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\FollowCam">
+      <UniqueIdentifier>{5879f348-49fd-4046-87bf-57e5f9fbc18d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

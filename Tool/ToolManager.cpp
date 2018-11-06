@@ -17,6 +17,7 @@
 #include "../Viewer/Frustum.h"
 #include "../Light/Shadow.h"
 #include "../Objects/WeaponModel.h"
+#include "../Systems/Window.h"
 
 ToolManager::ToolManager(ExecuteValues*values)
 	:values(values)
@@ -149,6 +150,24 @@ void ToolManager::Render()
 					Shader*shader = new Shader(Shaders + L"018_NormalMap.hlsl");
 					objects[L"Object"][L"Cube"+to_wstring(cubeNum)]->ModelName() = L"Cube" + to_wstring(cubeNum);
 					objects[L"Object"][L"Cube" + to_wstring(cubeNum)]->SetShader(shader);
+
+					MeshCube*cube = dynamic_cast<MeshCube*>(objects[L"Object"][L"Cube" + to_wstring(cubeNum)]);
+					
+					//TODO:추가코드임
+					objIter oiter = objects.find(L"Charactor");
+					modelIter miter;
+					if (oiter != objects.end())
+					{
+						objIter oiter = objects.find(L"Charactor");
+						modelIter miter = oiter->second.begin();
+
+						for (; miter != oiter->second.end(); miter++)
+						{
+							Player*p = dynamic_cast<Player*>(miter->second);
+							cube->InputPlayerPtr(p);
+						}
+					}
+
 					LIGHT->GetShadow()->Add(objects[L"Object"][L"Cube" + to_wstring(cubeNum)]);
 					modelNames.push_back(objects[L"Object"][L"Cube" + to_wstring(cubeNum)]->ModelName());
 					cubeNum++;
@@ -180,6 +199,21 @@ void ToolManager::Render()
 					static int terrainNum = 0;
 					terrains[L"Terrain" + to_wstring(terrainNum)] = new TerrainRender(values);
 					terrains[L"Terrain" + to_wstring(terrainNum)]->name = L"Terrain" + to_wstring(terrainNum);
+					
+					//TODO:추가코드임
+					objIter oiter = objects.find(L"Charactor");
+					modelIter miter;
+					if (oiter != objects.end())
+					{
+						miter = oiter->second.begin();
+
+						for (; miter != oiter->second.end(); miter++)
+						{
+							Player*p = dynamic_cast<Player*>(miter->second);
+							p->SetTerrain(terrains[L"Terrain" + to_wstring(terrainNum)]);
+						}
+					}
+
 					modelNames.push_back(L"Terrain" + to_wstring(terrainNum));
 					terrainNum++;
 				}
@@ -257,6 +291,18 @@ void ToolManager::Render()
 			}
 			else
 				LIGHT->Render();
+
+			objIter oiter = objects.begin();
+			for (; oiter != objects.end(); oiter++)
+			{
+				modelIter miter = oiter->second.begin();
+
+				for (; miter != oiter->second.end(); miter++)
+				{
+					miter->second->SetShader(CharactorShader);
+					miter->second->PostRender();
+				}
+			}
 
 			//터레인
 			terrainIter tIter = terrains.begin();
@@ -540,6 +586,7 @@ void ToolManager::Update()
 
 	CAM->Update();
 	frustum->Update();
+
 }
 
 void ToolManager::PreRender()

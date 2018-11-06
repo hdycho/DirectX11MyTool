@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Mouse.h"
+#include "../Systems/Window.h"
 
 Mouse* Mouse::instance = NULL;
 
@@ -51,6 +52,7 @@ Mouse::~Mouse()
 
 void Mouse::Update()
 {
+
 	memcpy(buttonOldStatus, buttonStatus, sizeof(buttonOldStatus));
 
 	ZeroMemory(buttonStatus, sizeof(buttonStatus));
@@ -75,9 +77,18 @@ void Mouse::Update()
 			buttonMap[i] = BUTTON_INPUT_STATUS_NONE;
 	}
 
+	D3DDesc desc;
+	D3D::GetDesc(&desc);
+
 	POINT point;
 	GetCursorPos(&point);
-	ScreenToClient(handle, &point);
+	ScreenToClient(desc.Handle, &point);
+
+	Window::MouseNormalized(desc.Handle);
+
+	static bool isOverWindow = false;
+
+	//마우스 포지션 위치넘어가면 이전위치 넘어간위치 없애버리고 가운데로보내야함
 
 	wheelOldStatus.x = wheelStatus.x;
 	wheelOldStatus.y = wheelStatus.y;
@@ -85,8 +96,25 @@ void Mouse::Update()
 	wheelStatus.x = float(point.x);
 	wheelStatus.y = float(point.y);
 
-	wheelMoveValue = wheelStatus - wheelOldStatus;
+	if (!isOverWindow)
+	{
+		wheelMoveValue = wheelStatus - wheelOldStatus;
+		wheelMoveValueBefore = wheelMoveValue;
+	}
 	wheelOldStatus.z = wheelStatus.z;
+
+	isOverWindow = false;
+
+	RECT rc;
+	GetClientRect(desc.Handle, &rc);
+
+	//x축
+	if (point.x > rc.right || point.x < rc.left||
+		point.y>rc.bottom||point.y<rc.top)
+		isOverWindow = true;
+
+	if (isOverWindow)
+		wheelMoveValue = wheelMoveValueBefore;
 
 
 	DWORD tButtonStatus = GetTickCount();

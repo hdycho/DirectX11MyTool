@@ -167,7 +167,7 @@ void Trail::ImGuiRender()
 
 	wstring textScale = L"[" + trailName + L"]rotate";
 	ImGui::Text(String::ToString(textScale).c_str());
-	if (ImGui::DragFloat3("Rotation", (float*)&setRotation, 0.1f))
+	if (ImGui::DragFloat3("Rotation", (float*)&setRotation, 0.02f))
 		RotationDegree(setRotation);
 
 	wstring textRotate = L"[" + trailName + L"]scale";

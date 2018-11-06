@@ -128,7 +128,7 @@ public:
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
 	////////////////////////////포지션이 직접적으로 변할때 업데이트에서 사용/////////////////////////
-	void UpdateLine(D3DXVECTOR3 startPos, D3DXVECTOR3 lineDir, float line)
+	D3DXVECTOR3 UpdateLine(D3DXVECTOR3 startPos, D3DXVECTOR3 lineDir, float line)
 	{
 		vertices[0].Position = startPos;
 		vertices[0].Color = D3DXCOLOR(1, 0, 0, 1);
@@ -141,6 +141,8 @@ public:
 		vertices[1].Color = D3DXCOLOR(1, 0, 0, 1);
 
 		D3D::GetDC()->UpdateSubresource(vertexBuffer, 0, NULL, &vertices[0], sizeof(VertexTextureNormal), vertexCount);
+
+		return vertices[1].Position - vertices[0].Position;
 	}
 	void UpdateLine(D3DXVECTOR3 startPos, D3DXVECTOR3 endPos)
 	{

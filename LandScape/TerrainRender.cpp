@@ -179,6 +179,46 @@ void TerrainRender::Render()
 	}
 }
 
+float TerrainRender::Y(D3DXVECTOR3& position)
+{
+	UINT x = (UINT)position.x;
+	UINT z = (UINT)position.z;
+
+	if (x < 0 || x >= width) return 0.0f;
+	if (z < 0 || z >= height) return 0.0f;
+
+	UINT index[4];
+	index[0] = (width + 1) * z + x;
+	index[1] = (width + 1) * (z + 1) + x;
+	index[2] = (width + 1) * z + (x + 1);
+	index[3] = (width + 1) * (z + 1) + (x + 1);
+
+	D3DXVECTOR3 v[4];
+	for (int i = 0; i < 4; i++)
+		v[i] = vertices[index[i]].Position;
+
+	float ddx = (position.x - v[0].x) / 1.0f;
+	float ddz = (position.z - v[0].z) / 1.0f;
+
+	D3DXVECTOR3 temp;
+
+	if (ddx + ddz <= 1)
+	{
+		temp = v[0] + (v[2] - v[0]) * ddx + (v[1] - v[0]) * ddz;
+	}
+	else
+	{
+		ddx = 1 - ddx;
+		ddz = 1 - ddz;
+
+		temp = v[3] + (v[1] - v[3]) * ddx + (v[2] - v[3]) * ddz;
+	}
+
+	//	TODO : 3D API.com
+
+	return temp.y;
+}
+
 bool TerrainRender::Y(OUT D3DXVECTOR3 * out)
 {
 	D3DXVECTOR3 start;
