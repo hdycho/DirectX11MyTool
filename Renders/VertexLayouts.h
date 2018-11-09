@@ -10,6 +10,16 @@ struct Vertex
 	D3DXVECTOR3 Position;
 };
 
+struct VertexSize
+{
+	VertexSize()
+		:Position(0, 0, 0)
+		, Size(0, 0) {}
+
+	D3DXVECTOR3 Position;
+	D3DXVECTOR2 Size;
+};
+
 //=======================================================================================
 
 struct VertexColor
@@ -66,7 +76,7 @@ struct VertexTextureNormal2
 {
 	VertexTextureNormal2()
 		: Position(0, 0, 0)
-		, Uv(0, 0,0,0)
+		, Uv(0, 0, 0, 0)
 		, Normal(0, 0, 0) {}
 
 	D3DXVECTOR3 Position;
@@ -148,10 +158,10 @@ struct VertexTextureColor2
 	VertexTextureColor2()
 		: Position(0, 0, 0)
 		, Uv(0, 0)
-		, Color(0, 0, 0, 1) 
+		, Color(0, 0, 0, 1)
 		, Color2(0, 0, 0, 1)
 	{
-		
+
 	}
 
 	D3DXVECTOR3 Position;

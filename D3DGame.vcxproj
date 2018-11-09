@@ -189,6 +189,7 @@
     <ClCompile Include="Objects\GameAnimModel.cpp" />
     <ClCompile Include="Objects\GameModel.cpp" />
     <ClCompile Include="Objects\GameRender.cpp" />
+    <ClCompile Include="Objects\GSBillboard.cpp" />
     <ClCompile Include="Objects\MeshCube.cpp" />
     <ClCompile Include="Objects\MeshPlane.cpp" />
     <ClCompile Include="Objects\MeshQuad.cpp" />
@@ -295,6 +296,7 @@
     <ClInclude Include="Objects\GameAnimModel.h" />
     <ClInclude Include="Objects\GameModel.h" />
     <ClInclude Include="Objects\GameRender.h" />
+    <ClInclude Include="Objects\GSBillboard.h" />
     <ClInclude Include="Objects\MeshCube.h" />
     <ClInclude Include="Objects\MeshPlane.h" />
     <ClInclude Include="Objects\MeshQuad.h" />

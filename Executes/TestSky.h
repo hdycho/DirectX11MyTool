@@ -18,4 +18,5 @@ private:
 	class Sky*sky;
 	//class TerrainRender*terrain;
 	class ToolManager*tm;
+	class GSBillboard*biil;
 };

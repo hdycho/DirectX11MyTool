@@ -291,6 +291,9 @@
     <ClCompile Include="Viewer\Follow.cpp">
       <Filter>Viewer\FollowCam</Filter>
     </ClCompile>
+    <ClCompile Include="Objects\GSBillboard.cpp">
+      <Filter>Objects\Meshes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -606,6 +609,9 @@
     </ClInclude>
     <ClInclude Include="Viewer\Follow.h">
       <Filter>Viewer\FollowCam</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GSBillboard.h">
+      <Filter>Objects\Meshes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,13 @@ public:
 		D3D::GetDC()->PSSetConstantBuffers(slot, 1, &buffer);
 	}
 
+	void SetGSBuffer(UINT slot)
+	{
+		MapData(data, dataSize);
+
+		D3D::GetDC()->GSSetConstantBuffers(slot, 1, &buffer);
+	}
+
 protected:
 	ShaderBuffer(void* data, UINT dataSize)
 		: data(data), dataSize(dataSize)

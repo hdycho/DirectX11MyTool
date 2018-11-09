@@ -1,15 +1,10 @@
 #include "stdafx.h"
 #include "Shader.h"
 
-void Shader::Render()
-{
-	D3D::GetDC()->IASetInputLayout(inputLayout);
-	D3D::GetDC()->VSSetShader(vertexShader, NULL, 0);
-	D3D::GetDC()->PSSetShader(pixelShader, NULL, 0);
-}
 
 Shader::Shader(wstring shaderFile, string vsName, string psName)
 	: shaderFile(shaderFile), vsName(vsName), psName(psName)
+	, geometryBlob(NULL), geometryShader(NULL)
 {
 	CreateVertexShader();
 	CreatePixelShader();
@@ -26,6 +21,21 @@ Shader::~Shader()
 
 	SAFE_RELEASE(pixelBlob);
 	SAFE_RELEASE(pixelShader);
+
+	SAFE_RELEASE(geometryBlob);
+	SAFE_RELEASE(geometryShader);
+}
+
+void Shader::Render()
+{
+	D3D::GetDC()->IASetInputLayout(inputLayout);
+	D3D::GetDC()->VSSetShader(vertexShader, NULL, 0);
+	D3D::GetDC()->PSSetShader(pixelShader, NULL, 0);
+
+	if (geometryShader != NULL)
+		D3D::GetDC()->GSSetShader(geometryShader, NULL, 0);
+
+
 }
 
 void Shader::CreateVertexShader()
@@ -163,6 +173,29 @@ void Shader::CreateInputLayout()
 		, vertexBlob->GetBufferPointer()
 		, vertexBlob->GetBufferSize()
 		, &inputLayout
+	);
+	assert(SUCCEEDED(hr));
+}
+
+void Shader::CreateGS(string func)
+{
+	gsName = func;
+
+	ID3D10Blob* error;
+	HRESULT hr = D3DX11CompileFromFile
+	(
+		shaderFile.c_str(), NULL, NULL, gsName.c_str(), "gs_5_0"
+		, D3D10_SHADER_ENABLE_STRICTNESS, 0, NULL
+		, &geometryBlob, &error, NULL
+	);
+	CheckShaderError(hr, error);
+
+	hr = D3D::GetDevice()->CreateGeometryShader
+	(
+		geometryBlob->GetBufferPointer()
+		, geometryBlob->GetBufferSize()
+		, NULL
+		, &geometryShader
 	);
 	assert(SUCCEEDED(hr));
 }
