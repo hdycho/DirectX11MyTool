@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Boundings">
+      <UniqueIdentifier>{5b4f4890-3c23-4787-a33a-db77e9017990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw">
+      <UniqueIdentifier>{57d88e20-8d52-4419-8e36-20852ef25630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment">
+      <UniqueIdentifier>{9ecda45a-bd55-47d4-9025-b523ca5e6692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{b78bd902-f302-4368-8a8e-540c0f33d999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renders">
+      <UniqueIdentifier>{c78953b0-5c36-4438-95ce-77f212531774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{87646400-5730-4da5-aa75-1d842c4645ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{fb77a292-4493-45d0-b126-3213e12d1fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer">
+      <UniqueIdentifier>{fc497878-ed59-4388-a2eb-df3aea735cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Gizmo">
+      <UniqueIdentifier>{2146c4b9-195a-47ad-b8ff-a98889e30ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Terrain">
+      <UniqueIdentifier>{ee320054-f647-42c2-926a-0ecae20039e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{376a2a0f-9121-499f-a249-6ef0184513a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datas">
+      <UniqueIdentifier>{1c96c67d-f73c-49e9-97ff-0b4cbd9c90fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Sky">
+      <UniqueIdentifier>{68553a7b-0daf-4460-a0c0-28d10da3e4f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Shadow">
+      <UniqueIdentifier>{5341f4d6-5b8f-415c-9356-cd269af5e466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Mesh">
+      <UniqueIdentifier>{bf866e54-c133-4010-bc03-20822d8a5493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Line">
+      <UniqueIdentifier>{e0a5926f-babb-4181-bb91-4e1ea7bc1cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Rain">
+      <UniqueIdentifier>{3c59e1e8-b80e-407c-b309-04bdc04470f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Water">
+      <UniqueIdentifier>{88df67df-4bae-4de1-ae2c-13e88b61f8a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Grass">
+      <UniqueIdentifier>{c3c0c52f-c586-45ab-ab0f-9171667f3b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collider">
+      <UniqueIdentifier>{26d1d2c1-a37d-409e-acdb-4adfd828353d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{267630dc-2dd3-407e-ad3d-101300d4c88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Billboard">
+      <UniqueIdentifier>{8e41fa29-1591-4aa9-aea1-704d14a75f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToolHeader">
+      <UniqueIdentifier>{f221213e-a840-4c34-9515-876aaecfae6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\BehaviorTree">
+      <UniqueIdentifier>{31a3c5e9-546e-41c5-a277-ce7ce4603fa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{ec9bb25f-d8db-4316-84a0-e610d9c3a5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Charactor">
+      <UniqueIdentifier>{6dd0bea3-0b84-49d5-9dca-f2d9215ebabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapon">
+      <UniqueIdentifier>{e233f776-4b15-4aa3-aaab-deca215bdb6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\FollowCam">
+      <UniqueIdentifier>{0d49acb7-e107-4825-9eb5-dd5c45502d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Particle">
+      <UniqueIdentifier>{5486ac8d-b940-4aa0-a2d1-86b6b893d8f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Boundings\BBox.h">
+      <Filter>Boundings</Filter>
+    </ClInclude>
+    <ClInclude Include="Boundings\BSphere.h">
+      <Filter>Boundings</Filter>
+    </ClInclude>
+    <ClInclude Include="Boundings\Ray.h">
+      <Filter>Boundings</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelBone.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelClip.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelMesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelMeshPart.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\CBuffer.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Context.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\CsResource.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Material.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Render2D.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Texture.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\VertexLayouts.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\D3D.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\DirectWrite.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Keyboard.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Mouse.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Time.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Window.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\BinaryFile.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Json.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Math.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Path.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Point.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\PriorityQueue.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Rect.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\String.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Xml.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Camera.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\DepthStencilView.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Fixity.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Freedom.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Frustum.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Perspective.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\RenderTargetView.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Viewport.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\IExecute.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\GeometryManager.h">
+      <Filter>Draw\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\Gizmo.h">
+      <Filter>Draw\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\GizmoGrid.h">
+      <Filter>Draw\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\GizmoModel.h">
+      <Filter>Draw\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\LineMaker.h">
+      <Filter>Draw\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\HeightMap.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Patch.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Terrain.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\TerrainRender.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Datas\GameData.h">
+      <Filter>Datas</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\RenderTarget.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\IData.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\CubeSky.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Sky.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\IShadow.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Shadow.h">
+      <Filter>Environment\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\Mesh.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\MeshCube.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\MeshCylinder.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\MeshGrid.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\MeshQuad.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\MeshSphere.h">
+      <Filter>Draw\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\DebugLine.h">
+      <Filter>Draw\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\ILine.h">
+      <Filter>Draw\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\IObject.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Rain.h">
+      <Filter>Environment\Rain</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\IType.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider\ColliderElement.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider\ColliderRay.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider\ColliderSphere.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider\CollisionContext.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider\ColliderBox.h">
+      <Filter>Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\ICollider.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\IPicked.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\FileManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\ColliderManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Billboard.h">
+      <Filter>Environment\Billboard</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolHeader\GameTool.h">
+      <Filter>ToolHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Grass.h">
+      <Filter>Environment\Grass</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Effect.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\BehaviorTree.h">
+      <Filter>Objects\BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelInstance.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\AnimInstance.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GameRender.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GameModel.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\InstanceManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GameAnimator.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\BoneSphere.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Player.h">
+      <Filter>Objects\Charactor</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Weapon.h">
+      <Filter>Objects\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\TPSCamera.h">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\TrailRenderer.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\BulletManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Enemy.h">
+      <Filter>Objects\Charactor</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\NearEnemy.h">
+      <Filter>Objects\Charactor</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\SceneManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\ParticleSystem.h">
+      <Filter>Environment\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\ParticleManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Follow.h">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\UIManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\SoundManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Boss.h">
+      <Filter>Objects\Charactor</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\ProgressBar.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Model\Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelBone.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelClip.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelMesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelMeshPart.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelReader.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\CBuffer.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Context.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\CsResource.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Material.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Render2D.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Texture.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\D3D.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\DirectWrite.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Keyboard.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Mouse.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Time.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Window.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\BinaryFile.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Json.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Math.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Path.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Point.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\PriorityQueue.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Rect.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\String.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Xml.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Camera.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\DepthStencilView.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Fixity.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Freedom.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Frustum.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Perspective.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\RenderTargetView.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Viewport.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\GeometryManager.cpp">
+      <Filter>Draw\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\Gizmo.cpp">
+      <Filter>Draw\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\GizmoGrid.cpp">
+      <Filter>Draw\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\GizmoModel.cpp">
+      <Filter>Draw\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\HeightMap.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Patch.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Terrain.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\TerrainRender.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\RenderTarget.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\CubeSky.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Sky.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Shadow.cpp">
+      <Filter>Environment\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\Mesh.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\MeshCube.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\MeshCylinder.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\MeshGrid.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\MeshQuad.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\MeshSphere.cpp">
+      <Filter>Draw\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\DebugLine.cpp">
+      <Filter>Draw\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Rain.cpp">
+      <Filter>Environment\Rain</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider\CollisionContext.cpp">
+      <Filter>Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider\ColliderElement.cpp">
+      <Filter>Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\FileManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\ColliderManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Billboard.cpp">
+      <Filter>Environment\Billboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Grass.cpp">
+      <Filter>Environment\Grass</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Effect.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\BehaviorTree.cpp">
+      <Filter>Objects\BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelInstance.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\AnimInstance.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GameRender.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GameModel.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\InstanceManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GameAnimator.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\BoneSphere.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Player.cpp">
+      <Filter>Objects\Charactor</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Weapon.cpp">
+      <Filter>Objects\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\TPSCamera.cpp">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\TrailRenderer.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\BulletManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Enemy.cpp">
+      <Filter>Objects\Charactor</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\NearEnemy.cpp">
+      <Filter>Objects\Charactor</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\SceneManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\ParticleSystem.cpp">
+      <Filter>Environment\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\ParticleManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Follow.cpp">
+      <Filter>Viewer\FollowCam</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\UIManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\SoundManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Boss.cpp">
+      <Filter>Objects\Charactor</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\ProgressBar.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Type>Model</Type>
+        <MeshFile>C:/DirectXTool/_Models/AngleST/AngleST.mesh</MeshFile>
+        <MaterialFile>C:/DirectXTool/_Models/AngleST/AngleST.material</MaterialFile>
+        <Name>AngleST.mesh</Name>
+        <MinX>-2.9832537</MinX>
+        <MinY>-0.014129693</MinY>
+        <MinZ>-1.5927415</MinZ>
+        <MaxX>1.5927415</MaxX>
+        <MaxY>4.7475648</MaxY>
+        <MaxZ>2.687639</MaxZ>
+        <MaterialSize>1</MaterialSize>
+        <material0>
+            <DiffuseFile>C:/DirectXTool/_Models/AngleST/angelStatue.png</DiffuseFile>
+            <SpecularFile>C:/DirectXTool/_Models/AngleST/angelStatue_specular.png</SpecularFile>
+            <NormalFile>C:/DirectXTool/_Models/AngleST/angelStatue_normal.png</NormalFile>
+            <Diffuse>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Diffuse>
+            <Specular>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Specular>
+        </material0>
+        <ColliderSize>1</ColliderSize>
+        <collider0>
+            <Type>Box</Type>
+            <ColliderPosX>0.40000001</ColliderPosX>
+            <ColliderPosY>0</ColliderPosY>
+            <ColliderPosZ>-0.30000001</ColliderPosZ>
+            <ColliderScaleX>0.60000002</ColliderScaleX>
+            <ColliderScaleY>1</ColliderScaleY>
+            <ColliderScaleZ>0.60000002</ColliderScaleZ>
+            <ColliderRotateX>0</ColliderRotateX>
+            <ColliderRotateY>0</ColliderRotateY>
+            <ColliderRotateZ>0</ColliderRotateZ>
+        </collider0>
+        <TrailSize>0</TrailSize>
+    </Desc>
+</AnimDesc>

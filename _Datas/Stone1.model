@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Type>Model</Type>
+        <MeshFile>C:/DirectXTool/_Models/Stone/Stone1.mesh</MeshFile>
+        <MaterialFile>C:/DirectXTool/_Models/Stone/Stone1.material</MaterialFile>
+        <Name>Stone1.mesh</Name>
+        <MinX>-4.5825539</MinX>
+        <MinY>-3.7698345</MinY>
+        <MinZ>-3.9218326</MinZ>
+        <MaxX>3.5150416</MaxX>
+        <MaxY>3.8614466</MaxY>
+        <MaxZ>3.8148866</MaxZ>
+        <MaterialSize>1</MaterialSize>
+        <material0>
+            <DiffuseFile>C:/DirectXTool/_Models/Stone/rock1_Albedo.png</DiffuseFile>
+            <SpecularFile>C:/DirectXTool/_Models/Stone/rock1_Spec.png</SpecularFile>
+            <NormalFile>C:/DirectXTool/_Models/Stone/rock1_Normal.png</NormalFile>
+            <Diffuse>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Diffuse>
+            <Specular>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Specular>
+        </material0>
+        <ColliderSize>1</ColliderSize>
+        <collider0>
+            <Type>Box</Type>
+            <ColliderPosX>0</ColliderPosX>
+            <ColliderPosY>0</ColliderPosY>
+            <ColliderPosZ>0</ColliderPosZ>
+            <ColliderScaleX>1</ColliderScaleX>
+            <ColliderScaleY>1</ColliderScaleY>
+            <ColliderScaleZ>1</ColliderScaleZ>
+            <ColliderRotateX>0</ColliderRotateX>
+            <ColliderRotateY>0</ColliderRotateY>
+            <ColliderRotateZ>0</ColliderRotateZ>
+        </collider0>
+        <TrailSize>0</TrailSize>
+    </Desc>
+</AnimDesc>

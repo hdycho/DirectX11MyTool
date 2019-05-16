@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkyDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Name>Sky</Name>
+        <StarMap>../../_Textures/starfield.png</StarMap>
+        <MoonMap>../../_Textures/moon.tga</MoonMap>
+        <GlowMap>../../_Textures/moonglow.tga</GlowMap>
+        <CloudMap>../../_Textures/CloudMap.png</CloudMap>
+        <Leans>90.000008</Leans>
+        <TimeFactor>0</TimeFactor>
+        <SampleCount>20</SampleCount>
+        <CloudScale>4.6195698</CloudScale>
+        <CloudSpeed>0.02</CloudSpeed>
+        <WaveLength>
+            <WaveLengthX>0.64999998</WaveLengthX>
+            <WaveLengthY>0.56999999</WaveLengthY>
+            <WaveLengthZ>0.47499999</WaveLengthZ>
+        </WaveLength>
+        <StartTheta>3.2269599</StartTheta>
+    </Desc>
+</SkyDesc>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModelDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Type>Animation</Type>
+        <MeshFile>C:/DirectXTool/_Models/NPC/NPC.mesh</MeshFile>
+        <MaterialFile>C:/DirectXTool/_Models/NPC/NPC.material</MaterialFile>
+        <Name>NPC.mesh</Name>
+        <MinX>-109.6004</MinX>
+        <MinY>-0.95742011</MinY>
+        <MinZ>-25.64555</MinZ>
+        <MaxX>108.61787</MaxX>
+        <MaxY>220.84557</MaxY>
+        <MaxZ>18.642933</MaxZ>
+        <MaterialSize>1</MaterialSize>
+        <material0>
+            <DiffuseFile>C:/DirectXTool/_Models/NPC/Demon__diffuse.png</DiffuseFile>
+            <SpecularFile>C:/DirectXTool/_Models/NPC/Demon__specular.png</SpecularFile>
+            <NormalFile>C:/DirectXTool/_Models/NPC/Demon__normal.png</NormalFile>
+            <Diffuse>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Diffuse>
+            <Specular>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>50.000004</A>
+            </Specular>
+        </material0>
+        <ColliderSize>0</ColliderSize>
+        <TrailSize>0</TrailSize>
+        <ClipStart>Clip</ClipStart>
+        <ClipSize>1</ClipSize>
+        <Dwarf Idle>
+            <FileName>C:/DirectXTool/_Models/NPC/Dwarf Idle.fbx.anim</FileName>
+            <Speed>1</Speed>
+            <StartFrame>0</StartFrame>
+            <EndtFrame>209</EndtFrame>
+            <Repeat>true</Repeat>
+            <BlendTime>6</BlendTime>
+            <InPlace>true</InPlace>
+        </Dwarf Idle>
+    </Desc>
+</ModelDesc>

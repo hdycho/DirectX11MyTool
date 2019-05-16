@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Type>Model</Type>
+        <MeshFile>C:/DirectXTool/_Models/Ship/Ship.mesh</MeshFile>
+        <MaterialFile>C:/DirectXTool/_Models/Ship/Ship.material</MaterialFile>
+        <Name>Ship.mesh</Name>
+        <MinX>-131.27359</MinX>
+        <MinY>0</MinY>
+        <MinZ>-129.27342</MinZ>
+        <MaxX>89.787506</MaxX>
+        <MaxY>120.10748</MaxY>
+        <MaxZ>129.27341</MaxZ>
+        <MaterialSize>1</MaterialSize>
+        <material0>
+            <DiffuseFile>C:/DirectXTool/_Models/Ship/T_VH_Manta_D.tga</DiffuseFile>
+            <SpecularFile>C:/DirectXTool/_Models/Ship/T_VH_Manta_S.tga</SpecularFile>
+            <NormalFile>C:/DirectXTool/_Models/Ship/T_VH_Manta_N.tga</NormalFile>
+            <Diffuse>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Diffuse>
+            <Specular>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Specular>
+        </material0>
+        <ColliderSize>1</ColliderSize>
+        <collider0>
+            <Type>Box</Type>
+            <ColliderPosX>0</ColliderPosX>
+            <ColliderPosY>0</ColliderPosY>
+            <ColliderPosZ>0</ColliderPosZ>
+            <ColliderScaleX>1</ColliderScaleX>
+            <ColliderScaleY>1</ColliderScaleY>
+            <ColliderScaleZ>1</ColliderScaleZ>
+            <ColliderRotateX>0</ColliderRotateX>
+            <ColliderRotateY>0</ColliderRotateY>
+            <ColliderRotateZ>0</ColliderRotateZ>
+        </collider0>
+        <TrailSize>0</TrailSize>
+    </Desc>
+</AnimDesc>

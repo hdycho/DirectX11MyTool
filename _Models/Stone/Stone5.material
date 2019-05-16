@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>rock5</Name>
+        <DiffuseFile>rock5_Albedo.png</DiffuseFile>
+        <SpecularFile>rock5_Spec.png</SpecularFile>
+        <NormalFile>rock5_Normal.png</NormalFile>
+        <Diffuse>
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+            <A>1</A>
+        </Specular>
+        <SpecularExp>1</SpecularExp>
+    </Material>
+</Materials>

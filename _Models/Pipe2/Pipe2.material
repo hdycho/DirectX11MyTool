@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>11 - Default</Name>
+        <DiffuseFile>tile_Pipe_A_BaseColor.png</DiffuseFile>
+        <SpecularFile>tile_Pipe_A_MaskMap.png</SpecularFile>
+        <NormalFile>tile_Pipe_A_Normal.png</NormalFile>
+        <Diffuse>
+            <R>0.58823532</R>
+            <G>0.58823532</G>
+            <B>0.58823532</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>0</A>
+        </Specular>
+        <SpecularExp>1.9999999</SpecularExp>
+    </Material>
+    <Material>
+        <Name>Material #13</Name>
+        <DiffuseFile>tile_Pipe_A_BaseColor.png</DiffuseFile>
+        <SpecularFile>tile_Pipe_A_MaskMap.png</SpecularFile>
+        <NormalFile>tile_Pipe_A_Normal.png</NormalFile>
+        <Diffuse>
+            <R>0.588</R>
+            <G>0.588</G>
+            <B>0.588</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>0</A>
+        </Specular>
+        <SpecularExp>2</SpecularExp>
+    </Material>
+    <Material>
+        <Name>Material #14</Name>
+        <DiffuseFile>tile_Pipe_A_BaseColor.png</DiffuseFile>
+        <SpecularFile>tile_Pipe_A_MaskMap.png</SpecularFile>
+        <NormalFile>tile_Pipe_A_Normal.png</NormalFile>
+        <Diffuse>
+            <R>0.588</R>
+            <G>0.588</G>
+            <B>0.588</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>0</A>
+        </Specular>
+        <SpecularExp>2</SpecularExp>
+    </Material>
+    <Material>
+        <Name>Material #15</Name>
+        <DiffuseFile>tile_Pipe_A_BaseColor.png</DiffuseFile>
+        <SpecularFile>tile_Pipe_A_MaskMap.png</SpecularFile>
+        <NormalFile>tile_Pipe_A_Normal.png</NormalFile>
+        <Diffuse>
+            <R>0.588</R>
+            <G>0.588</G>
+            <B>0.588</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>0</A>
+        </Specular>
+        <SpecularExp>2</SpecularExp>
+    </Material>
+</Materials>

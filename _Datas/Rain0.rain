@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RainDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Name>Rain</Name>
+        <RainSize>
+            <RainSizeX>100</RainSizeX>
+            <RainSizeY>100</RainSizeY>
+            <RainSizeZ>100</RainSizeZ>
+        </RainSize>
+        <Velocity>
+            <VelocityX>0</VelocityX>
+            <VelocityY>-200</VelocityY>
+            <VelocityZ>0</VelocityZ>
+        </Velocity>
+        <DrawDist>1000</DrawDist>
+        <RainColor>
+            <ColorR>1</ColorR>
+            <ColorG>1</ColorG>
+            <ColorB>1</ColorB>
+            <ColorA>1</ColorA>
+        </RainColor>
+        <RainCount>1000</RainCount>
+    </Desc>
+</RainDesc>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>13 - Default</Name>
+        <DiffuseFile>tile_Pipe_B_BaseColor.png</DiffuseFile>
+        <SpecularFile>tile_Pipe_B_MaskMap.png</SpecularFile>
+        <NormalFile>tile_Pipe_B_Normal.png</NormalFile>
+        <Diffuse>
+            <R>0.58823532</R>
+            <G>0.58823532</G>
+            <B>0.58823532</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>0</A>
+        </Specular>
+        <SpecularExp>1.9999999</SpecularExp>
+    </Material>
+</Materials>

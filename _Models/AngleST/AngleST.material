@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>angelStatue</Name>
+        <DiffuseFile>angelStatue.png</DiffuseFile>
+        <SpecularFile>angelStatue_specular.png</SpecularFile>
+        <NormalFile>angelStatue_normal.png</NormalFile>
+        <Diffuse>
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+            <A>0.80000001</A>
+        </Diffuse>
+        <Specular>
+            <R>-4.3160208e+08</R>
+            <G>-4.3160208e+08</G>
+            <B>-4.3160208e+08</B>
+            <A>-4.3160208e+08</A>
+        </Specular>
+        <SpecularExp>-4.3160208e+08</SpecularExp>
+    </Material>
+</Materials>

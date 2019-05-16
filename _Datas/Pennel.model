@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimDesc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Desc>
+        <Type>Model</Type>
+        <MeshFile>C:/DirectXTool/_Models/Pennel/Pennel.mesh</MeshFile>
+        <MaterialFile>C:/DirectXTool/_Models/Pennel/Pennel.material</MaterialFile>
+        <Name>Pennel.mesh</Name>
+        <MinX>0</MinX>
+        <MinY>0</MinY>
+        <MinZ>-255.16724</MinZ>
+        <MaxX>153.40279</MaxX>
+        <MaxY>9.9359579</MaxY>
+        <MaxZ>0</MaxZ>
+        <MaterialSize>1</MaterialSize>
+        <material0>
+            <DiffuseFile>C:/DirectXTool/_Models/Pennel/Platform_blue.jpg</DiffuseFile>
+            <SpecularFile></SpecularFile>
+            <NormalFile>C:/DirectXTool/_Models/Pennel/Platform_normalmap.png</NormalFile>
+            <Diffuse>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Diffuse>
+            <Specular>
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+                <A>1</A>
+            </Specular>
+        </material0>
+        <ColliderSize>0</ColliderSize>
+        <TrailSize>0</TrailSize>
+    </Desc>
+</AnimDesc>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>Gold_1_faked ref</Name>
+        <DiffuseFile>Wall.png</DiffuseFile>
+        <SpecularFile></SpecularFile>
+        <NormalFile></NormalFile>
+        <Diffuse>
+            <R>-4.3160208e+08</R>
+            <G>-4.3160208e+08</G>
+            <B>-4.3160208e+08</B>
+            <A>-4.3160208e+08</A>
+        </Diffuse>
+        <Specular>
+            <R>-4.3160208e+08</R>
+            <G>-4.3160208e+08</G>
+            <B>-4.3160208e+08</B>
+            <A>-4.3160208e+08</A>
+        </Specular>
+        <SpecularExp>-4.3160208e+08</SpecularExp>
+    </Material>
+    <Material>
+        <Name>Metal_Chrome</Name>
+        <DiffuseFile>grass.png</DiffuseFile>
+        <SpecularFile></SpecularFile>
+        <NormalFile></NormalFile>
+        <Diffuse>
+            <R>0.43921572</R>
+            <G>0.43921572</G>
+            <B>0.43921572</B>
+            <A>1</A>
+        </Diffuse>
+        <Specular>
+            <R>0.89999998</R>
+            <G>0.89999998</G>
+            <B>0.89999998</B>
+            <A>1.5</A>
+        </Specular>
+        <SpecularExp>3.9999998</SpecularExp>
+    </Material>
+</Materials>

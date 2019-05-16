@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.h" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Executes\TestTool.cpp">
+      <Filter>Executes</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\SceneTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Executes\TestTool.h">
+      <Filter>Executes</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\SceneTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Executes">
+      <UniqueIdentifier>{60a19c79-0e31-4467-a6fa-6f3596dc2ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{df354f0e-b428-4008-b0a7-51cb690f4cbb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
